@@ -12,7 +12,7 @@ function onImageClick(evt) {
     if (evt.target.nodeName !== "IMG") return;
 
     let gallery = new SimpleLightbox('.gallery a', {captionsData: 'alt', captionDelay: 250});
-    gallery.open(evt.target);
+    gallery.open();
     
 }
 
