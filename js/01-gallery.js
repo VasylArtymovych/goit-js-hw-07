@@ -22,15 +22,15 @@ function onGalleryImgClick(evt) {
     });
     
     instance.show();
+};
 
-    function onModalPressEsc(evt) {
+function onModalPressEsc(evt) {
     const isEsc = evt.code === 'Escape';
     
     if (isEsc) {
         instance.close();
         }
     };
-};
 
 function createGalleryMarkup(obj) {
     const murkup = obj.map(createGalleryElement).join('');
@@ -40,6 +40,5 @@ function createGalleryMarkup(obj) {
 createGalleryMarkup(galleryItems);
 
 function createGalleryElement({preview, original, description}) { 
-    const element = `<a class="gallery__link" href='${original}'><img class="gallery__image" src="${preview}" data-source="${original}" alt="${description}"></a>`;
-    return element;
+    return element = `<a class="gallery__link" href='${original}'><img class="gallery__image" src="${preview}" data-source="${original}" alt="${description}"></a>`; 
 };
